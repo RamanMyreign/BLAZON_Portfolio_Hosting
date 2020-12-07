@@ -55,7 +55,7 @@ function myFunction() {
     x=0;
     y=0;
     z=0;
-    location.replace("https://ramanmyreign.github.io/FullStack/blazon/upload.html");
+    location.replace("https://ramanmyreign.github.io/BLAZON_Portfolio_Hosting/upload.html");
   }
 
 function showError(input, msg){
