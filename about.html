@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav {
+            height: 80px;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+
+        }
+
+        .nav div {
+            color: white;
+            margin-left: 50px;
+        }
+
+        .nav img {
+            background-color: black;
+            color: white;
+            line-height: 80px;
+        }
+
+        .logo span {
+            font-size: 35px;
+            /* border: 2px solid green; */
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: blue;
+            position: absolute;
+            left: 120px;
+            top: 15px;
+
+        }
+
+        .nav .list-item {
+            position: absolute;
+            right: 10px;
+
+        }
+
+        .nav ul {
+            margin-right: 50px;
+            line-height: 80px;
+        }
+
+        .nav ul li {
+            list-style: none;
+            display: inline;
+            margin: 16px 20px;
+            font-size: 25px;
+            padding: 4px 15px;
+            border: none;
+            border-top: 2px solid rgb(238, 45, 45);
+            border-left: 2px solid red;
+
+        }
+
+        .nav ul li a,
+        span {
+            text-decoration: none;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .nav ul li a:hover {
+            color: red;
+            transition: 0.8s;
+        }
+
+        /* Footer */
+        .footer {
+            height: 400px;
+            background-color: black;
+        }
+
+        .foot-1 .fa {
+            font-size: 35px;
+            padding: 20px;
+            text-align: center;
+            width: 30px;
+            color: white;
+            border-radius: 50%;
+            margin: 40px 15px;
+            /* background-color: rgb(70, 64, 64); */
+            transition: .2s;
+        }
+
+        .foot-1 {
+            display: flex;
+            justify-content: center;
+            /* border-bottom: 1px solid rgb(155, 155, 155); */
+        }
+
+        .fa-facebook {
+            background-color: blue;
+        }
+
+        .fa-twitter {
+            background-color: rgb(50, 160, 204);
+        }
+
+        .fa-google-plus {
+            background-color: red;
+        }
+
+        .fa-linkedin {
+            background-color: rgb(5, 87, 119);
+        }
+
+        .fa-dribbble {
+            background-color: rgb(126, 9, 28);
+        }
+
+        .foot-1 .fa-facebook:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        .foot-1 .fa-twitter:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        .foot-1 .fa-google-plus:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        .foot-1 .fa-linkedin:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        .foot-1 .fa-dribbble:hover {
+            background-color: rgb(70, 64, 64);
+        }
+
+        .foot-2 {
+            color: white;
+            width: 450px;
+            float: left
+        }
+
+        .foot-2 ul {
+            margin-left: 100px;
+        }
+
+        .foot-2 ul li {
+            list-style: none;
+            font-size: 15px;
+            padding: 4px 8px;
+
+        }
+
+        .foot-2 ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .foot-2 ul li a:hover {
+            color: red;
+        }
+
+        .foot-2 p {
+            padding-top: 100px;
+            padding-bottom: 5px;
+            width: 380px;
+            margin: auto;
+        }
+
+        .about-body {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px;
+            background-image: url(../img/about-bg.jpg);
+            background-size: cover;
+        }
+        .about-body h1{
+            margin-top: 20px;
+            font-size: 45px;
+            margin-bottom: 20px;
+            color: rgb(206, 203, 197);
+            /* border-right: 8px solid black;
+            border-bottom: 8px solid black; */
+            padding: 12px;
+        }
+        .about-body h2{
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: blue;
+            font-weight: bold;
+        }
+        .about-body p{
+            color: rgb(194, 180, 180);
+        }
+        .about-body h3{
+            color: rgb(129, 129, 185);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo"><img src="../img/B-logo1.png" alt="" height="60" width="60"><span>Blazon</span></div>
+        <div class="list-item">
+            <ul class="nav-bar">
+                <li class="nav-link"><a href="./home.html">Home</a></li>
+                <li class="nav-link"><a href="#">About</a></li>
+                <li class="nav-link"><a href="./contact.html">Contact</a></li>
+                <li class="nav-link"><a href="./signup.html">Signup </a>
+                </li>
+                <li class="nav-link"><a href="./login.html">Login</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="about-body">
+        <h1>About Us</h1>
+        <h2>We help the community to become great and do
+            great things.
+        </h2>
+
+        <p class="lead">&nbsp;We are an online tool that believe in making it easy for all the techical geeks and
+            creatives to create an online portfolio so, they can showcase their work online. </p>
+        <p>We believe in creating a better professional environment for people
+            of all backgrounds surrounding us.</p>
+        <p>We believe in providing the space, opportunity and a right platform
+            for creative minds.</p>    
+        <h2>Our Mission</h2> 
+        <p>We are on our way to become the go-to resource for discovering and
+            connecting with developers, designers and creative talent around the globe.</p>
+        <p>&nbsp;Our mission is simple - to become a tool that allows creative
+            minds to showcase their work and talent online through this platform. Whether you're a developer,&nbsp;
+            &nbsp;designer or other type of creative, we request you to join us; this is just the
+            humble beginning of something great. If you have feedback on something we &nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do, or even don't do, or if you want us to improve any of the services
+            provided by us, then we want to hear from you. Get in touch, we'd be too happy&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to hear what you have to say!
+        </p>  
+        <h2>Why choose us ?</h2><br>
+        <p>Our platform is free, quick and easy to use - you don't need to be
+            a technical guru or a programming whizz to use it. You can manage your entire online portfolio by yourself
+            using just any web browser. Our site is designed to impress and is perfect for promoting you and your
+            awesome
+            creations and work. Still confused or not convinced yet ? Take a look at our example online portfolio
+            samples
+            or better still go for an another option, sign up for a free account if yet not registered yourself - it
+            will
+            take less than 60 seconds or simply login to your account if already a registered user .
+        </p>
+        <br>
+        <h2>Get to know us</h2>
+        <h3>"Working together toward a common vision."
+        </h3><br>
+        <p>We are a team that firmly believe that teamwork is the ability to
+            work
+            together towards a common vision. We are a team that believes that creative collaboration can happen
+            anywhere
+            and want our team to work where they feel most comfortable and inspired.
+        </p>
+        <br>
+        <h2>Any suggestions or queries ?</h2><br>
+        <p>We're constantly working hard to make our site one of the best tools
+            that exist online for tech geeks and creative minds. If you have any questions or concerns please feel free
+            to <a href="#">get in touch</a> - we would love to hear from you.
+        </p>
+        <br> 
+    </div>
+
+    <div class="footer">
+        <div class="foot-1">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-dribbble"></i></a>
+        </div>
+        <div class="foot-2">
+            <h3 style="margin-left: 100px; margin-bottom: 10px;"><b>LINKS</b></h3>
+            <ul>
+                <li class="link"><a href="./signup.html">Signup</a></li>
+                <li class="link"><a href="./login.html">Login</a></li>
+                <li class="link"><a href="#">Examples</a></li>
+                <li class="link"><a href="#">Github</a></li>
+                <li class="link"><a href="#">Facebook</a></li>
+                <li class="link"><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+        <div class="foot-2">
+            <h3 style="margin-left: 100px; margin-bottom: 10px;"><b>QUICK LINKS</b></h3>
+            <ul>
+                <li class="link"><a href="#">About Us</a></li>
+                <li class="link"><a href="#">Contact Us</a></li>
+                <li class="link"><a href="#">Contribute</a></li>
+                <li class="link"><a href="#">Privacy Policy</a></li>
+                <li class="link"><a href="#">Sitemap</a></li>
+            </ul>
+        </div>
+        <div class="foot-2">
+            <p>Copyright &copy; 2020 All Rights Reserved by RNRJ co.</p>
+            <div class="k" style="border-top: 2px solid red; width: 370px; margin: auto;"></div>
+        </div>
+    </div>
+</body>
+
+</html>
