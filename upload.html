@@ -255,14 +255,14 @@
         <h1>Portfolio Header</h1>
         <form action="">
             <h2>Your Name</h2>
-            <div><input type="text" placeholder="">
-                <button type="button" id="submit">Save</button>
+            <div><input type="text" class="input1"  placeholder="">
+                <button type="button" id="submit" onclick="bluring()">Save</button>
                 <button type="reset" id="reset">Cancel</button>
             </div>
             <h2>Choose Your Image</h2>
-            <div>
-                <input type="file" name="" id="">
-                <button type="button" id="submit">Save</button>
+            <div >
+                <input type="file" name="">
+                <button type="button" id="submit" onclick="bluring()">Save</button>
                 <button type="reset" id="reset">Cancel</button>
             </div>
         </form>
@@ -272,8 +272,8 @@
         <form action="">
             <h2>Footer Text</h2>
             <h4>Choose the text at the footer of your website(e.g copyright notice )</h4>
-            <div><input type="text" placeholder="">
-                <button type="button" id="submit">Save</button>
+            <div><input class="input2" type="text" id="" placeholder="">
+                <button type="button" id="submit" onclick="bluring('input2')">Save</button>
                 <button type="reset" id="reset">Cancel</button>
             </div>
         </form>
@@ -284,35 +284,35 @@
             <h2>Link to your Facebook</h2>
             <div class="social-link">
                 <input type="text" placeholder="">
-                <button type="button" id="submit">Save</button>
+                <button type="button" id="submit" onclick="bluring()">Save</button>
                 <button type="reset" id="reset">Cancel</button>
                 <i class="fa fa-facebook"></i>
             </div>
             <h2>Link to your LinkdIn</h2>
             <div class="social-link">
                 <input type="text" placeholder="">
-                <button type="button" id="submit">Save</button>
+                <button type="button" id="submit" onclick="bluring()">Save</button>
                 <button type="reset" id="reset">Cancel</button>
                 <i class="fa fa-linkedin"></i>
             </div>
             <h2>Link to your Instagram</h2>
             <div class="social-link">
                 <input type="text" placeholder="">
-                <button type="button" id="submit">Save</button>
+                <button type="button" id="submit" onclick="bluring()">Save</button>
                 <button type="reset" id="reset">Cancel</button>
                 <i class="fa fa-instagram"></i>
             </div>
             <h2>Link to your Github</h2>
             <div class="social-link">
                 <input type="text" placeholder="">
-                <button type="button" id="submit">Save</button>
+                <button type="button" id="submit" onclick="bluring()">Save</button>
                 <button type="reset" id="reset">Cancel</button>
                 <i class="fa fa-github"></i>
             </div>
             <h2>Link to your Google-Plus</h2>
             <div class="social-link">
                 <input type="text" placeholder="">
-                <button type="button" id="submit">Save</button>
+                <button type="button" id="submit" onclick="bluring()">Save</button>
                 <button type="reset" id="reset">Cancel</button>
                 <i class="fa fa-google-plus"></i>
 
@@ -320,19 +320,25 @@
             <h2>Link to your Twitter</h2>
             <div class="social-link">
                 <input type="text" placeholder="">
-                <button type="button" id="submit">Save</button>
+                <button type="button" id="submit" onclick="bluring()">Save</button>
                 <button type="reset" id="reset">Cancel</button>
                 <i class="fa fa-twitter"></i>
             </div>
             <h2>Link to your Youtube</h2>
             <div class="social-link">
                 <input type="text" placeholder="">
-                <button type="button" id="submit">Save</button>
+                <button type="button" id="submit" onclick="bluring()">Save</button>
                 <button type="reset" id="reset">Cancel</button>
                 <i class="fa fa-youtube-play"></i>
             </div>
         </form>
     </div>
+    <script>
+        function bluring(){
+            document.querySelector(".aman").style.backgroundColor = 'gray';
+        }
+
+    </script>
 </body>
 
 </html>
