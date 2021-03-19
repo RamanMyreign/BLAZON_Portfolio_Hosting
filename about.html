@@ -16,73 +16,118 @@
 
         .nav {
             height: 80px;
+            display: flex;
             background-color: black;
+            /* padding: px 20px 20px; */
+            color: white;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .logo {
+            width: 40%;
             display: flex;
             align-items: center;
-            /* justify-content: center; */
-
         }
 
-        .nav div {
-            color: white;
-            margin-left: 50px;
-        }
-
-        .nav img {
+        .logo img {
             background-color: black;
             color: white;
             line-height: 80px;
+            margin-left: 60px;
         }
 
         .logo span {
             font-size: 35px;
-            /* border: 2px solid green; */
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            color: blue;
+            font-family: Brush Script MT, Brush Script Std, cursive;
+            color: rgb(94, 94, 136);
             position: absolute;
             left: 120px;
             top: 15px;
-
         }
 
-        .nav .list-item {
-            position: absolute;
-            right: 10px;
-
-        }
-
-        .nav ul {
-            margin-right: 50px;
-            line-height: 80px;
-        }
-
-        .nav ul li {
+        .menu {
+            width: 60%;
+            display: flex;
+            align-items: center;
             list-style: none;
-            display: inline;
-            margin: 16px 20px;
-            font-size: 25px;
-            padding: 4px 15px;
-            border: none;
+            padding: 15px 8px 8px 15px;
+            right: 10px;
+            /* justify-content: space-between; */
+
+
+        }
+
+        .menu li {
+            margin-right: 20px;
             border-top: 2px solid rgb(238, 45, 45);
             border-left: 2px solid red;
-
+            margin: 16px 15px;
+            font-size: 18px;
+            padding: 4px 15px;
         }
 
-        .nav ul li a,
-        span {
+        .menu li a {
+            position: relative;
             text-decoration: none;
-            font-weight: bolder;
+            padding: 15px 10x 10px;
+            font-weight: 600;
             color: white;
+
+            transition: all 0.3s;
         }
 
-        .nav ul li a:hover {
+        .menu li a:hover {
+            border-color: red;
             color: red;
-            transition: 0.8s;
+
+        }
+
+        .menu li:hover {
+            border-top: 5px solid rgb(238, 45, 45);
+            border-left: 3px solid red
+        }
+
+        .show-btn,
+        .hide-btn {
+            position: absolute;
+            right: 40px;
+            width: 40px;
+            top: 10px;
+            height: 40px;
+            font-size: 30px;
+            background-color: orangered;
+            padding: 4px;
+            border-radius: 4px;
+            color: white;
+            display: none;
+            /* outline: none; */
+
+        }
+
+        #chk {
+            position: absolute;
+            visibility: hidden;
+            z-index: -10;
+        }
+
+        #show-more {
+            background-color: white;
+            color: rgb(253, 100, 45);
+            border: 3px solid rgb(212, 189, 189);
+            width: 180px;
+            font-size: 14px;
+            height: 40px;
+            border-radius: 4px;
+            position: relative;
+            left: 45%;
+            top: 5%;
         }
 
         /* Footer */
         .footer {
-            height: 400px;
+            margin-top: 20px;
+            height: 55vh;
             background-color: black;
         }
 
@@ -144,19 +189,26 @@
             background-color: rgb(70, 64, 64);
         }
 
+        .foot {
+            width: 100%;
+            display: flex;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+
         .foot-2 {
             color: white;
-            width: 400px;
-            float: left
+            width: 50%;
+            /* float: left */
         }
 
         .foot-2 ul {
-            margin-left: 130px;
+            margin-left: 20%;
         }
 
         .foot-2 ul li {
             list-style: none;
-            font-size: 15px;
+            font-size: 13px;
             padding: 4px 8px;
 
         }
@@ -173,7 +225,8 @@
         .foot-2 p {
             padding-top: 100px;
             padding-bottom: 5px;
-            width: 370px;
+            width: 74%;
+            color: rgb(199, 160, 160);
             margin: auto;
         }
 
@@ -207,24 +260,71 @@
         .about-body h3{
             color: rgb(129, 129, 185);
         }
+
+        @media (max-width:830px) {
+
+.show-btn,
+.hide-btn {
+    display: block;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60vh;
+    background-color: rgb(56, 36, 36);
+    text-align: center;
+    padding: 20px 0px;
+    transition: .7s;
+    line-height: normal;
+}
+
+#chk:checked~.menu {
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.menu li {
+    display: block;
+    padding: 10px;
+}
+
+.menu li a {
+    display: block;
+    border-bottom: none;
+
+}
+}
     </style>
 </head>
 
 <body>
     <div class="nav">
-        <div class="logo"><img src="./img/B-logo1.png" alt="" height="60" width="60"><span>Blazon</span></div>
-        <div class="list-item">
-            <ul class="nav-bar">
-                <li class="nav-link"><a href="./index.html">Home</a></li>
-                <li class="nav-link"><a href="#">About</a></li>
-                <li class="nav-link"><a href="./contact.html">Contact</a></li>
-                <li class="nav-link"><a href="./signup.html">Signup </a>
-                </li>
-                <li class="nav-link"><a href="./login.html">Login</a></li>
+        <input type="checkbox" name="" id="chk">
+        <label for="chk" class="show-btn">
+            <i> <b> ≡ </b></i>
+        </label>
 
-            </ul>
+        <div class="logo">
+            <div class="logo"><img src="./img/B-logo1.png" alt="" height="60" width="60"><span>Blazon</span></div>
         </div>
+        <ul class="menu">
+            <li class="nav-link"><a href="#">Home</a></li>
+            <li class="nav-link"><a href="./about.html">About</a></li>
+            <li class="nav-link"><a href="./contact.html">Contact</a></li>
+            <li class="nav-link"><a href="./signup.html">Signup </a>
+            </li>
+            <li class="nav-link"><a href="./login.html">Login</a></li>
+            <label for="chk" class="hide-btn">
+                <i>×</i>
+            </label>
+        </ul>
+
     </div>
+
 
     <div class="about-body">
         <h1>About Us</h1>
@@ -287,31 +387,35 @@
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-dribbble"></i></a>
         </div>
-        <div class="foot-2">
-            <h3 style="margin-left: 100px; margin-bottom: 10px;"><b>LINKS</b></h3>
-            <ul>
-                <li class="link"><a href="./signup.html">Signup</a></li>
-                <li class="link"><a href="./login.html">Login</a></li>
-                <li class="link"><a href="#">Examples</a></li>
-                <li class="link"><a href="#">Github</a></li>
-                <li class="link"><a href="#">Facebook</a></li>
-                <li class="link"><a href="#">Instagram</a></li>
-            </ul>
+        <div class="foot">
+            <div class="foot-2">
+                <h3 style="margin-left: 20%; margin-bottom: 10px;"><b>LINKS</b></h3>
+                <ul>
+                    <li class="link"><a href="./signup.html">Signup</a></li>
+                    <li class="link"><a href="./login.html">Login</a></li>
+                    <li class="link"><a href="#">Examples</a></li>
+                    <li class="link"><a href="#">Github</a></li>
+                    <li class="link"><a href="#">Facebook</a></li>
+                    <li class="link"><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="foot-2">
+                <h3 style="margin-left: 20%; margin-bottom: 10px;"><b>QUICK LINKS</b></h3>
+                <ul>
+                    <li class="link"><a href="#">About Us</a></li>
+                    <li class="link"><a href="#">Contact Us</a></li>
+                    <li class="link"><a href="#">Contribute</a></li>
+                    <li class="link"><a href="#">Privacy Policy</a></li>
+                    <li class="link"><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="foot-2">
+                <p>Copyright &copy; 2020 All Rights Reserved by RNRJ co.</p>
+                <div class="k" style="border-top: 2px solid red; width: 70%; margin: auto;"></div>
+            </div>
         </div>
-        <div class="foot-2">
-            <h3 style="margin-left: 100px; margin-bottom: 10px;"><b>QUICK LINKS</b></h3>
-            <ul>
-                <li class="link"><a href="#">About Us</a></li>
-                <li class="link"><a href="#">Contact Us</a></li>
-                <li class="link"><a href="#">Contribute</a></li>
-                <li class="link"><a href="#">Privacy Policy</a></li>
-                <li class="link"><a href="#">Sitemap</a></li>
-            </ul>
-        </div>
-        <div class="foot-2">
-            <p>Copyright &copy; 2020 All Rights Reserved by RNRJ co.</p>
-            <div class="k" style="border-top: 2px solid red; width: 370px; margin: auto;"></div>
-        </div>
+
+
     </div>
 </body>
 
